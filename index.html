@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOPIKA SADANAND | IT Engineer &amp; AI Developer Portfolio</title>
+    <meta name="description" content="Official personal portfolio of Gopika Sadanand – Information Technology professional interested in software development and AI. B.Tech IT at GEC Idukki.">
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-mesh"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="nav-brand">
+                <span class="brand-badge">GS</span>
+                <span>Gopika Sadanand</span>
+            </a>
+
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="logoutBtn" class="btn-logout" title="Sign out of portfolio">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="status-pill">
+                        <span class="status-dot"></span>
+                        <span>Available for Software &amp; AI Roles</span>
+                    </div>
+
+                    <h1>
+                        Hi, I'm <span class="gradient-text">Gopika Sadanand</span>
+                    </h1>
+
+                    <p class="subtitle">
+                        Information Technology professional interested in <strong>software development</strong> and <strong>AI</strong>. Passionate about engineering high-impact web architectures, intelligent conversational systems, and full-stack solutions.
+                    </p>
+
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fa-solid fa-rocket"></i> View Featured Projects
+                        </a>
+                        <a href="#experience" class="btn btn-secondary">
+                            <i class="fa-solid fa-briefcase"></i> Experience
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fa-regular fa-envelope"></i> Contact Me
+                        </a>
+                    </div>
+
+                    <div class="hero-highlights">
+                        <div class="highlight-box">
+                            <div class="highlight-num gradient-text">2026</div>
+                            <div class="highlight-label">B.Tech IT Graduate</div>
+                        </div>
+                        <div class="highlight-box">
+                            <div class="highlight-num gradient-text">3+</div>
+                            <div class="highlight-label">Flagship Systems</div>
+                        </div>
+                        <div class="highlight-box">
+                            <div class="highlight-num gradient-text">5k+</div>
+                            <div class="highlight-label">Voters Assisted</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="avatar-frame">
+                        <div class="avatar-img-circle">
+                            <i class="fa-solid fa-user-astronaut"></i>
+                        </div>
+                        <h3>Gopika Sadanand</h3>
+                        <div class="dept">B.Tech Information Technology</div>
+                        <div class="loc">
+                            <i class="fa-solid fa-location-dot" style="color: var(--accent-pink);"></i> GEC Idukki, Kerala, India
+                        </div>
+                    </div>
+
+                    <!-- Floating tech badges -->
+                    <div class="floating-badge badge-top">
+                        <i class="fa-solid fa-brain" style="color: #ec4899;"></i>
+                        <span>AI &amp; NLP Systems</span>
+                    </div>
+                    <div class="floating-badge badge-bottom">
+                        <i class="fa-brands fa-node-js" style="color: #10b981;"></i>
+                        <span>Full-Stack Development</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Education Section -->
+        <section id="about" class="section-py">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Background &amp; Academics</span>
+                    <h2 class="section-title">About Me &amp; Education</h2>
+                    <p class="section-desc">My academic foundation and technical enthusiasm in Information Technology.</p>
+                </div>
+
+                <div class="about-grid">
+                    <!-- About Card -->
+                    <div class="card">
+                        <div class="card-title">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-user-gear"></i>
+                            </div>
+                            <h3>About Me</h3>
+                        </div>
+                        <p class="about-p">
+                            I am an <strong>Information Technology professional</strong> deeply interested in <strong>software development</strong>, cloud backends, and <strong>Artificial Intelligence</strong>.
+                        </p>
+                        <p class="about-p">
+                            I love transforming intricate real-world challenges into elegant, efficient, and accessible applications. From building civic engagement chatbots deployed during elections to engineering generative 3D visual environments, I continuously explore cutting-edge engineering paradigms.
+                        </p>
+                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1rem;">
+                            <span class="tech-tag"><i class="fa-solid fa-code"></i> Clean Architecture</span>
+                            <span class="tech-tag"><i class="fa-solid fa-robot"></i> AI Engineering</span>
+                            <span class="tech-tag"><i class="fa-solid fa-users"></i> Team Collaboration</span>
+                        </div>
+                    </div>
+
+                    <!-- Education Card -->
+                    <div class="card" id="education">
+                        <div class="card-title">
+                            <div class="card-icon" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan);">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h3>Education</h3>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-title">B.Tech in Information Technology</div>
+                                <div class="timeline-subtitle">Government Engineering College, Idukki</div>
+                                <div class="timeline-time"><i class="fa-regular fa-calendar"></i> 2022 – 2026</div>
+                                <p class="timeline-desc">Specializing in algorithms, databases, web technologies, software engineering, and applied artificial intelligence.</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot" style="border-color: var(--accent-pink);"></div>
+                                <div class="timeline-title">Higher Secondary Education (Bio-Maths)</div>
+                                <div class="timeline-subtitle">Seethi Sahib HSS, Taliparamba</div>
+                                <div class="timeline-time"><i class="fa-regular fa-calendar"></i> Graduated with 93.5%</div>
+                                <p class="timeline-desc">Distinction in Mathematics, Physics, Chemistry, and Computer Foundations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section-py" style="background: rgba(16, 21, 36, 0.4);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Industry Internship</span>
+                    <h2 class="section-title">Professional Experience</h2>
+                    <p class="section-desc">Practical software engineering experience inside public administration systems.</p>
+                </div>
+
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3 class="exp-role">Software Development Intern</h3>
+                            <div class="exp-org">
+                                <i class="fa-solid fa-building-columns" style="color: var(--accent-indigo);"></i>
+                                District Collectorate, Idukki
+                            </div>
+                        </div>
+                        <span class="exp-badge">
+                            <i class="fa-regular fa-clock"></i> Internship Experience
+                        </span>
+                    </div>
+
+                    <ul class="exp-responsibilities">
+                        <li>
+                            Architected and maintained internal software utilities and digital administrative tools to optimize governance and record processing.
+                        </li>
+                        <li>
+                            Automated repetitive reporting workflows, drastically reducing manual processing time for collectorate administrative teams.
+                        </li>
+                        <li>
+                            Assisted in software requirement gathering, designing responsive web interfaces, and prototyping AI-assisted data extraction for citizen services.
+                        </li>
+                        <li>
+                            Collaborated with senior IT leads to ensure robust data confidentiality, database reliability, and system responsiveness.
+                        </li>
+                    </ul>
+
+                    <div class="exp-tags">
+                        <span class="tech-tag">Internal Tools</span>
+                        <span class="tech-tag">Workflow Automation</span>
+                        <span class="tech-tag">Web Development</span>
+                        <span class="tech-tag">Public Sector Tech</span>
+                        <span class="tech-tag">Database Ops</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-py">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Portfolio Showcase</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-desc">Production-grade applications combining web engineering, generative AI, and civic innovation.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: QUICK CREATION -->
+                    <div class="project-card">
+                        <div class="project-banner p1">
+                            <span class="project-type-badge">Web Platform</span>
+                            <div class="project-banner-icon">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">QUICK CREATION</h3>
+                            <p class="project-desc">
+                                A dynamic student designer platform that allows creators to build, customize, and share responsive design assets and web templates with real-time preview.
+                            </p>
+                            <div class="project-stack">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                            <div class="project-footer">
+                                <button class="project-btn open-project-btn" data-project="quick-creation">
+                                    <span>Explore System</span> <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                                <span class="mono-text" style="font-size: 0.75rem; color: var(--text-muted);">Active Prototype</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: TEXTOON -->
+                    <div class="project-card">
+                        <div class="project-banner p2">
+                            <span class="project-type-badge">Generative AI &amp; VR</span>
+                            <div class="project-banner-icon">
+                                <i class="fa-solid fa-vr-cardboard"></i>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">TEXTOON</h3>
+                            <p class="project-desc">
+                                An innovative AI pipeline that translates natural language text prompts into interactive 3D cartoon scenes and spatial VR experiences using deep diffusion models.
+                            </p>
+                            <div class="project-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">Stable Diffusion</span>
+                                <span class="tech-tag">MiDaS</span>
+                                <span class="tech-tag">Three.js / WebXR</span>
+                            </div>
+                            <div class="project-footer">
+                                <button class="project-btn open-project-btn" data-project="textoon">
+                                    <span>Explore System</span> <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                                <span class="mono-text" style="font-size: 0.75rem; color: var(--text-muted);">Tech Fest Award</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: VOTEASSIST IDUKKI -->
+                    <div class="project-card">
+                        <div class="project-banner p3">
+                            <span class="project-type-badge">Civic Tech &amp; WhatsApp AI</span>
+                            <div class="project-banner-icon">
+                                <i class="fa-solid fa-check-to-slot"></i>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">VOTEASSIST IDUKKI</h3>
+                            <p class="project-desc">
+                                A multilingual WhatsApp election assistance chatbot supporting voters with polling booth locations, voter ID guidance, and election FAQs in Malayalam &amp; English.
+                            </p>
+                            <div class="project-stack">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Dialogflow</span>
+                                <span class="tech-tag">Twilio API</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <div class="project-footer">
+                                <button class="project-btn open-project-btn" data-project="voteassist">
+                                    <span>Explore System</span> <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                                <span class="mono-text" style="font-size: 0.75rem; color: var(--text-muted);">5,000+ Queries</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Achievements Section -->
+        <section id="skills" class="section-py" style="background: rgba(16, 21, 36, 0.4);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Competencies</span>
+                    <h2 class="section-title">Technical Skills &amp; Stack</h2>
+                    <p class="section-desc">Tools, languages, and frameworks I use to engineer robust software.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-category-card">
+                        <h4 class="skill-cat-title">
+                            <i class="fa-solid fa-code" style="color: var(--accent-indigo);"></i> Languages
+                        </h4>
+                        <div class="skill-badges">
+                            <span class="skill-badge">C</span>
+                            <span class="skill-badge">Python</span>
+                            <span class="skill-badge">Java</span>
+                            <span class="skill-badge">JavaScript (ES6+)</span>
+                            <span class="skill-badge">SQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <h4 class="skill-cat-title">
+                            <i class="fa-solid fa-layer-group" style="color: var(--accent-cyan);"></i> Web &amp; Backend
+                        </h4>
+                        <div class="skill-badges">
+                            <span class="skill-badge">HTML5</span>
+                            <span class="skill-badge">CSS3 / Flex / Grid</span>
+                            <span class="skill-badge">Node.js</span>
+                            <span class="skill-badge">Express.js</span>
+                            <span class="skill-badge">RESTful APIs</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <h4 class="skill-cat-title">
+                            <i class="fa-solid fa-database" style="color: #ec4899;"></i> Data &amp; AI
+                        </h4>
+                        <div class="skill-badges">
+                            <span class="skill-badge">MongoDB</span>
+                            <span class="skill-badge">MySQL</span>
+                            <span class="skill-badge">Google Dialogflow</span>
+                            <span class="skill-badge">Stable Diffusion</span>
+                            <span class="skill-badge">NLP Fundamentals</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <h4 class="skill-cat-title">
+                            <i class="fa-solid fa-toolbox" style="color: #10b981;"></i> Tools &amp; Practices
+                        </h4>
+                        <div class="skill-badges">
+                            <span class="skill-badge">Twilio API</span>
+                            <span class="skill-badge">Git &amp; GitHub</span>
+                            <span class="skill-badge">Critical Thinking</span>
+                            <span class="skill-badge">Agile Teamwork</span>
+                            <span class="skill-badge">Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements Grid -->
+                <div id="achievements" style="margin-top: 4rem;">
+                    <div class="section-header" style="margin-bottom: 2.5rem;">
+                        <span class="section-tag">Recognitions</span>
+                        <h3 class="section-title" style="font-size: 1.9rem;">Honors &amp; Extracurriculars</h3>
+                    </div>
+
+                    <div class="achievements-grid">
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>IEEEXtreme 17.0 Programming Competition</h4>
+                                <p>Competed in global 24-hour virtual competitive programming hackathon solving algorithmic challenges.</p>
+                            </div>
+                        </div>
+
+                        <div class="achievement-item">
+                            <div class="achievement-icon" style="color: var(--accent-cyan);">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>ICT Academy of Kerala – ICSET 2023</h4>
+                                <p>Participated in International Conference on Software Engineering Trends &amp; Digital Transformation.</p>
+                            </div>
+                        </div>
+
+                        <div class="achievement-item">
+                            <div class="achievement-icon" style="color: #ec4899;">
+                                <i class="fa-solid fa-hands-holding-circle"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Stellerio – Pragyan'24 Volunteer</h4>
+                                <p>Coordinated technical event sessions and managed student developer registrations for premier annual symposium.</p>
+                            </div>
+                        </div>
+
+                        <div class="achievement-item">
+                            <div class="achievement-icon" style="color: #10b981;">
+                                <i class="fa-solid fa-medal"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Program Associate &amp; NOVA 4.0 Volunteer</h4>
+                                <p>Program Associate for 'One Creator from One Ward Scholarship Programme' &amp; core coordinator at NOVA 4.0 Technical Fest.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-py">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Let's Connect</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-desc">Have a software engineering opportunity or project in mind? Reach out directly.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div>
+                        <div class="contact-info-list">
+                            <a href="mailto:gopikasadan@gmail.com" class="contact-item">
+                                <div class="contact-icon-box">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h5>Email</h5>
+                                    <span>gopikasadan@gmail.com</span>
+                                </div>
+                            </a>
+
+                            <a href="tel:+917907931579" class="contact-item">
+                                <div class="contact-icon-box" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan);">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h5>Phone</h5>
+                                    <span>+91 7907931579</span>
+                                </div>
+                            </a>
+
+                            <div class="contact-item">
+                                <div class="contact-icon-box" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h5>Location</h5>
+                                    <span>Idukki, Kerala, India</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 style="margin-bottom: 0.8rem; font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px;">Connect on Social</h5>
+                        <div class="social-bar">
+                            <a href="https://www.linkedin.com/in/gopikasadan" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/gopikasadan" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="mailto:gopikasadan@gmail.com" class="social-link" title="Direct Email">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Contact Form -->
+                    <div class="contact-form-card">
+                        <div id="formFeedback" class="alert-msg"></div>
+
+                        <form id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactName">Your Name</label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-regular fa-user input-icon"></i>
+                                        <input type="text" id="contactName" class="form-input" placeholder="e.g. Alex" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactEmail">Your Email</label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-regular fa-envelope input-icon"></i>
+                                        <input type="email" id="contactEmail" class="form-input" placeholder="e.g. alex@company.com" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactSubject">Subject</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-comment-dots input-icon"></i>
+                                    <input type="text" id="contactSubject" class="form-input" placeholder="e.g. Software Opportunity / Collaboration" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactMessage">Message</label>
+                                <textarea id="contactMessage" class="form-input textarea-input" placeholder="Write your message here..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                                <i class="fa-regular fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Details Modal -->
+    <div id="projectModal" class="modal-overlay" role="dialog" aria-modal="true">
+        <div class="modal-box">
+            <button id="modalCloseBtn" class="modal-close" aria-label="Close project modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <span class="status-pill" id="modalTagline" style="margin-bottom: 0.8rem; font-size: 0.78rem;"></span>
+            <h2 id="modalTitle" style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.8rem;"></h2>
+
+            <div id="modalTech" class="project-stack" style="margin-bottom: 1.2rem;"></div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-cyan); margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.5px;">Overview</h4>
+                <p id="modalOverview" style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7;"></p>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-indigo); margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.5px;">Key Objectives &amp; Engineering</h4>
+                <ul id="modalObjectives" class="exp-responsibilities" style="margin-bottom: 0;"></ul>
+            </div>
+
+            <div style="margin-bottom: 1.8rem;">
+                <h4 style="font-size: 0.95rem; font-weight: 700; color: #10b981; margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.5px;">System Features</h4>
+                <ul id="modalFeatures" class="exp-responsibilities" style="margin-bottom: 0;"></ul>
+            </div>
+
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+                <button id="modalActionBtn" class="btn btn-primary" style="flex: 1; justify-content: center;">
+                    Launch Simulation
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div>
+                © 2026 <strong>Gopika Sadanand</strong>. All rights reserved.
+            </div>
+            <div style="font-size: 0.82rem; color: var(--text-muted);">
+                Engineered with HTML5 • CSS3 • JavaScript • Responsive Glassmorphism
+            </div>
+        </div>
+    </footer>
+
+    <!-- App Script -->
+    <script src="script.js"></script>
+</body>
+</html>

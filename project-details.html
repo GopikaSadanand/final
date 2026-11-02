@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Details</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- Nav (same as index) -->
+    <nav class="navbar glass sticky">
+        <div class="nav-left">
+            <a href="index.html" class="nav-brand">Gopika Sadanand</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#projects">Back to Projects</a></li>
+            <li><button id="logoutBtn" class="btn-logout">Logout</button></li>
+        </ul>
+        <div class="nav-toggle"><span></span><span></span><span></span></div>
+    </nav>
+
+    <section class="section glass" id="projectDetail">
+        <div class="container">
+            <h2 id="projTitle"></h2>
+            <p id="projOverview"></p>
+            <h3>Objectives</h3>
+            <ul id="projObjectives"></ul>
+            <h3>Technologies</h3>
+            <ul id="projTech"></ul>
+            <h3>Features</h3>
+            <ul id="projFeatures"></ul>
+            <h3>Implementation</h3>
+            <p id="projImplementation"></p>
+            <h3>Outcome</h3>
+            <p id="projOutcome"></p>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Simple data object for projects (add more details as needed)
+        const projects = {
+            "quick-creation": {
+                title: "QUICK CREATION",
+                overview: "A student designer platform that allows users to create and share design assets.",
+                objectives: ["Provide an intuitive UI for designers", "Store assets in MongoDB", "Enable real‑time collaboration"],
+                technologies: ["HTML5", "CSS3", "JavaScript", "Node.js", "MongoDB"],
+                features: ["Responsive design", "User authentication", "Upload & gallery", "Live preview"],
+                implementation: "Front‑end built with vanilla JS; back‑end API with Express handling CRUD operations on MongoDB.",
+                outcome: "Successful MVP deployed; received positive feedback from beta testers."
+            },
+            "textoont": {
+                title: "TEXTOON",
+                overview: "AI‑driven service that converts textual descriptions into 3‑D cartoon scenes in VR.",
+                objectives: ["Parse natural language", "Generate 3‑D assets using Stable Diffusion & MiDaS", "Render in WebVR"],
+                technologies: ["NLP", "Stable Diffusion", "MiDaS", "Three.js", "WebXR"],
+                features: ["Voice input", "Real‑time generation", "VR preview", "Downloadable GLTF files"],
+                implementation: "Backend Python micro‑service calls Stable Diffusion and MiDaS models; results sent to front‑end which visualises them with Three.js.",
+                outcome: "Demo showcased at college tech fest, attracting interest for further development."
+            },
+            "voteassist-idukki": {
+                title: "VOTEASSIST IDUKKI",
+                overview: "A multilingual WhatsApp chatbot that assists voters with information about candidates and polling stations.",
+                objectives: ["Provide answers in multiple Indian languages", "Integrate with WhatsApp Business API", "Store voter queries in MySQL"],
+                technologies: ["Node.js", "Dialogflow", "Twilio", "MySQL"],
+                features: ["Language detection", "FAQ database", "Live support escalation"],
+                implementation: "Node.js server handles webhook from Twilio, forwards messages to Dialogflow for intent detection, and queries MySQL for static info.",
+                outcome: "Deployed during 2024 elections in Idukki, handling over 5k queries with 96% satisfaction."
+            }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const projKey = urlParams.get('project');
+        const data = projects[projKey];
+        if (!data) {
+            document.getElementById('projectDetail').innerHTML = '<p>Project not found.</p>';
+        } else {
+            document.getElementById('projTitle').textContent = data.title;
+            document.getElementById('projOverview').textContent = data.overview;
+            const fillList = (id, items) => {
+                const ul = document.getElementById(id);
+                items.forEach(i => { const li = document.createElement('li'); li.textContent = i; ul.appendChild(li); });
+            };
+            fillList('projObjectives', data.objectives);
+            fillList('projTech', data.technologies);
+            fillList('projFeatures', data.features);
+            document.getElementById('projImplementation').textContent = data.implementation;
+            document.getElementById('projOutcome').textContent = data.outcome;
+        }
+    </script>
+</body>
+</html>

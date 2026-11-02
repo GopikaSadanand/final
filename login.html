@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gopika Sadanand | Portfolio Portal</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+    <div class="bg-mesh"></div>
+
+    <div class="login-card">
+        <div class="login-avatar">
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        
+        <span class="status-pill" style="margin-bottom: 0.8rem;">
+            <span class="status-dot"></span> Secure Portfolio Portal
+        </span>
+        
+        <h1>Welcome Back</h1>
+        <p class="subtitle">Enter credentials to access Gopika Sadanand's personal portfolio, engineering projects &amp; resume.</p>
+
+        <div id="loginAlert" class="alert-msg alert-error">
+            <i class="fa-solid fa-circle-exclamation"></i> <span id="alertText">Invalid credentials. Try guest login!</span>
+        </div>
+
+        <form id="portfolioLoginForm" class="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-user input-icon"></i>
+                    <input type="text" id="username" class="form-input" placeholder="e.g. gopika or guest" value="gopika" required autocomplete="username">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock input-icon"></i>
+                    <input type="password" id="password" class="form-input" placeholder="••••••••" value="gopika123" required autocomplete="current-password">
+                    <button type="button" id="togglePasswordBtn" class="toggle-password" title="Toggle password visibility">
+                        <i class="fa-regular fa-eye" id="eyeIcon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="login-meta">
+                <label class="remember-label">
+                    <input type="checkbox" id="rememberMe" checked> Remember session
+                </label>
+                <span class="mono-text" style="color: var(--accent-cyan);">v2.4 Live</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i> Sign In to Portfolio
+            </button>
+        </form>
+
+        <div class="login-divider">
+            <span>Or Quick Preview</span>
+        </div>
+
+        <button type="button" id="guestLoginBtn" class="btn btn-guest" style="width: 100%; justify-content: center;">
+            <i class="fa-solid fa-bolt"></i> Instant 1-Click Guest Access
+        </button>
+
+        <div class="credential-tip">
+            <i class="fa-solid fa-circle-info" style="color: var(--accent-indigo);"></i>
+            <strong>Quick Access Hint:</strong> Username: <code class="mono-text">gopika</code> | Password: <code class="mono-text">gopika123</code> (or click the green button above).
+        </div>
+    </div>
+
+    <script>
+        // Check if already authenticated
+        if (sessionStorage.getItem('gopika_auth') === 'true' || localStorage.getItem('gopika_auth') === 'true') {
+            window.location.replace('index.html');
+        }
+
+        const loginForm = document.getElementById('portfolioLoginForm');
+        const loginAlert = document.getElementById('loginAlert');
+        const alertText = document.getElementById('alertText');
+        const guestBtn = document.getElementById('guestLoginBtn');
+        const toggleBtn = document.getElementById('togglePasswordBtn');
+        const passwordInput = document.getElementById('password');
+        const eyeIcon = document.getElementById('eyeIcon');
+
+        // Toggle password visibility
+        toggleBtn.addEventListener('click', () => {
+            const isPassword = passwordInput.getAttribute('type') === 'password';
+            passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+            eyeIcon.className = isPassword ? 'fa-regular fa-eye-slash' : 'fa-regular fa-eye';
+        });
+
+        function performLogin(username, role = 'User') {
+            sessionStorage.setItem('gopika_auth', 'true');
+            sessionStorage.setItem('gopika_user', username);
+            if (document.getElementById('rememberMe').checked) {
+                localStorage.setItem('gopika_auth', 'true');
+                localStorage.setItem('gopika_user', username);
+            }
+            window.location.href = 'index.html';
+        }
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const u = document.getElementById('username').value.trim();
+            const p = document.getElementById('password').value;
+
+            // Allow standard credentials or any reasonable input
+            if ((u.toLowerCase() === 'gopika' && p === 'gopika123') || u.toLowerCase() === 'guest' || u.toLowerCase() === 'admin') {
+                performLogin(u || 'Gopika');
+            } else {
+                loginAlert.style.display = 'block';
+                alertText.textContent = 'Invalid credentials. Use gopika / gopika123 or click "Instant 1-Click Guest Access".';
+            }
+        });
+
+        guestBtn.addEventListener('click', () => {
+            performLogin('Guest Explorer');
+        });
+    </script>
+</body>
+</html>
